@@ -14,7 +14,7 @@ function App() {
   const sendMessage = () => {
     setGenerate(true);
     axios
-      .post('',{"message":inputText})
+      .post(process.env.REACT_APP_API,{"message":inputText})
       .then((response) => {
         // console.log(response);
         setGenerate(false);
